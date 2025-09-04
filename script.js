@@ -29,6 +29,8 @@ add.addEventListener("click", (e) => {
         let lists = document.querySelectorAll(".list");
         if (lists.length == 0) {
           options.classList.remove("active");
+           result.classList.remove("active");
+           result.innerHTML="";
         }
       };
     }
