@@ -35,3 +35,20 @@ add.addEventListener("click", (e) => {
   }
 });
 
+click.addEventListener("click", (e) => {
+  e.preventDefault();
+  let values = document.querySelectorAll(".list_item");
+  let Arr = [];
+  for (let i = 0; i < values.length; i++) {
+    Arr.push(values[i].innerText);
+  }
+  if(Arr.length==0){
+     alert("Please Enter Something...");
+  }else{
+    let RandomIndex=Math.floor(Math.random() * Arr.length);
+    
+    let random=Arr[RandomIndex];
+    result.classList.add("active");
+    result.innerHTML=`<h1>${random}</h1>`
+  }
+});
